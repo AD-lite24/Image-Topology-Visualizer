@@ -7,7 +7,7 @@
 Icon
 
 *.pt
-
+*.save
 # Thumbnails
 ._*
 
