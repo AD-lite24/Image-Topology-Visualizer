@@ -7,7 +7,7 @@ between adjacent pixels, where each pixel is represented as a node in the graph.
 
 | Original | Coarse Topology | Smooth Topology |
 |---------|---------|---------|
-| <img src="https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/0601587a-c31f-4619-847b-15d50faad75c" alt="person_test" width="200"> | <img src="https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/05ae0bab-a04f-4955-bc26-9de3698f4a8a" alt="person_graph_render_coarse" width="200"> | <img src="https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/d2125d22-d84e-46ff-a7f3-b36c45972a86" alt="person_graph_render_smooth" width="200">
+| <img src="https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/0601587a-c31f-4619-847b-15d50faad75c" alt="person_test" height="300"> | <img src="https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/05ae0bab-a04f-4955-bc26-9de3698f4a8a" alt="person_graph_render_coarse" height="300"> | <img src="https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/d2125d22-d84e-46ff-a7f3-b36c45972a86" alt="person_graph_render_smooth" height="300" width="190">
 
 
 
