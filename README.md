@@ -23,4 +23,17 @@ between adjacent pixels, where each pixel is represented as a node in the graph.
 
 * Graph extraction parallelized using torch while graph node positions computed parallely during rendering runtime manually. Rendering time complexity is O(V + E) where V is number of vertices and E is number of edges.
 
+## Usage
+
+Run using 
+
+`$ python3 main.py <path to input image>`
+
+You can use the -t argument to set the model size to use smoother depths for graph extraction. Larger model -> higher resolution -> more pixels -> denser graph. Not necessarily desirable though. Values can be set to either 0, 1, 2, 2 being the smallest model and the default option
+
+Use the -s flag to save your render instead of displaying. It will be stored in directory called outputs inside your current directory. 
+
+Use the following command to turn off the numba low occupancy warning since our grid size won't really be big enough to warrant an underutilization warning.
+
+`$ conda env config vars set NUMBA_CUDA_LOW_OCCUPANY_WARNINGS=0`
 
