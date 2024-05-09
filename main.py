@@ -9,6 +9,7 @@ from utilities import ExtractGraph, Encoder,  MaxPool
 import OpenGL.GL.framebufferobjects as glfbo
 import numpy as np
 from tqdm import tqdm
+import argparse
 
 def normalize(value, min_value, max_value):
     return (value - min_value) / (max_value - min_value)
@@ -180,16 +181,26 @@ def main(rgb_path : str, device : object, model_type : str, save : bool):
     visualize(edge_index, rows, cols, pooled_depth, save, name)
     
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description="Generate graph topologies of any image")
+    parser.add_argument("input_file", help="Path to the input image")
+    parser.add_argument("-t", "--type", help="Model type \n 0: Large \n 1: Hybrid \n 2: Small \n Hint: Smaller or coarser models preffered for higher level information", \
+                        type=int, default=2)
+    parser.add_argument("-s", "--save", help="Save image to the outputs directory. Note that direct visualization won't be possible", \
+                        type=bool, default=False)
     
-    input_file = "data/car_highway_test.jpeg"
-    
-    save = True
-    model_ver = 2
+    args = parser.parse_args()
+
+    input_file = args.input_file
+    save = args.save
+    model_ver = args.type
 
     midas_type = {
         0 : "DPT_Large",
         1 : "DPT_Hybrid",
         2 : "MiDaS_small"
     }
+
+
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu') 
     main(input_file, device, midas_type[model_ver], save)

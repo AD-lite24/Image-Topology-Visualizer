@@ -1,11 +1,8 @@
 import torch
 import torch.nn as nn
 import torchvision.models as models
-import numpy as np
 
 def convert_to_edge_index(adj):
-    
-    num_of_nodes, _ = adj.size()
 
     adj_coo = adj.to_sparse().coalesce()
     edge_index = adj_coo.indices()
@@ -70,7 +67,6 @@ class ReconGraph(nn.Module):
                                 neighbours.add(((j, i), (j+dx, i+dy)))
         adjacency_matrix = torch.zeros(
             (self.m*self.n, self.m*self.n), dtype=bool)
-        # print(adjacency_matrix.shape)
 
         for val in neighbours:
             N1, N2 = val  # in (x, y) form
