@@ -3,7 +3,7 @@ import OpenGL.GLUT as glut
 import OpenGL.GL as gl
 import OpenGL.GLU as glu
 import torch
-import matplotlib.cm as cm
+import matplotlib.pyplot as plt
 import cv2
 from utilities import ExtractGraph, Encoder,  MaxPool
 import OpenGL.GL.framebufferobjects as glfbo
@@ -49,7 +49,7 @@ def visualize(edge_index, rows, cols, depth_vals, save, save_name):
 
 
         gl.glClear(gl.GL_COLOR_BUFFER_BIT) 
-        colormap = cm.get_cmap('viridis')
+        colormap = plt.get_cmap('viridis')
 
         gl.glPointSize(5.0)  # node point size
         gl.glBegin(gl.GL_POINTS)
@@ -58,7 +58,7 @@ def visualize(edge_index, rows, cols, depth_vals, save, save_name):
         low_percentile = np.percentile(depth, 5)
         high_percentile = np.percentile(depth, 95)
 
-        for i in tqdm(range(len(node_positions))):
+        for i in range(len(node_positions)):
             x_p = int(node_positions[i, 0])
             y_p = int(node_positions[i, 1])
 
@@ -80,7 +80,7 @@ def visualize(edge_index, rows, cols, depth_vals, save, save_name):
         gl.glLineWidth(1.4)  
         gl.glBegin(gl.GL_LINES)
 
-        for i in tqdm(range(len(edge_index[0]))):
+        for i in range(len(edge_index[0])):
             n1, n2 = edge_index[0, i], edge_index[1, i] 
             n1_x, n1_y = node_positions[n1, 0], node_positions[n1, 1]
             n2_x, n2_y = node_positions[n2, 0], node_positions[n2, 1]
