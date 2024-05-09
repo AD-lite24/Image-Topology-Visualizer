@@ -4,7 +4,10 @@ Visualize the topology of any RGB image with the help of graphs. The program con
 you provide to a depth map and extracts a graph topology. The edges represent a smooth gradient 
 between adjacent pixels, where each pixel is represented as a node in the graph. 
 
-![person_test_out_save_render](https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/05ae0bab-a04f-4955-bc26-9de3698f4a8a)
+<div style="display: flex;">
+    <img src="https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/05ae0bab-a04f-4955-bc26-9de3698f4a8a" alt="person_graph_render" style="width: 50%;">
+    <img src="https://github.com/AD-lite24/Image-Topology-Visualizer/assets/96363931/0601587a-c31f-4619-847b-15d50faad75c" alt="person_test" style="width: 50%;">
+</div>
 
 ## Features
 
