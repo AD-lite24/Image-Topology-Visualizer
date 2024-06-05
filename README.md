@@ -29,7 +29,7 @@ Run using
 
 `$ python3 main.py <path to input image>`
 
-You can use the -t argument to set the model size to use smoother depths for graph extraction. Larger model -> higher resolution -> more pixels -> denser graph. Not necessarily desirable though. Values can be set to either 0, 1, 2; 2 being the smallest model and the default option
+You can use the -t argument to set the model size to use smoother depths for graph extraction. Larger model -> higher resolution -> more pixels -> denser graph. Not necessarily desirable though. Values can be set to either 0, 1, 2; 2 being the smallest (coarsest) model and the default option
 
 Use the -s flag to save your render instead of displaying. It will be stored in directory called outputs inside your current directory. 
 
