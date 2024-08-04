@@ -13,9 +13,9 @@ between adjacent pixels, where each pixel is represented as a node in the graph.
 
 ## Features
 
-* The graph computation and rendering is cuda accelerated allowing for almost instantaneous rendering of even very large graphs, often exceed 50k nodes. 
+* The graph computation and rendering is cuda accelerated allowing for almost instantaneous rendering of even very large graphs, often exceeding 50k nodes. 
 
-* The nodes in the graph are also color coded according to the depth of their corresponding pixel, allowing for easy visualization and another dimension of understanding to the generation
+* The nodes in the graph are color coded according to the estimated depth of the corresponding pixel, allowing for easy visualization and another dimension of understanding to the generation.
 
 * Tweaking the model size to get graphs from coarser to smoother depth maps. 
 
